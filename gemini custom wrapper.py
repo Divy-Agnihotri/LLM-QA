@@ -22,7 +22,7 @@ class LCGemini(DeepEvalBaseLLM):
         res = await chat_model.ainvoke(prompt)
         return res.content
     def get_model_name(self):
-        return "Custom Azure OpenAI Model"
+        return "Custom Gemini Model"
 
 custom_model = ChatGoogleGenerativeAI(
     model="gemini-3.8-flash",
