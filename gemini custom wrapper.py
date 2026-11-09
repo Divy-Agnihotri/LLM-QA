@@ -6,6 +6,7 @@ code to use gemini as llm as judge, by default deep eval uses OPENAI, so a custo
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from deepeval.models.base_model import DeepEvalBaseLLM
+
 class LCGemini(DeepEvalBaseLLM):
     def __init__(
         self,
@@ -28,5 +29,4 @@ custom_model = ChatGoogleGenerativeAI(
     model="gemini-3.8-flash",
     temperature=0.7
 )
-lcGemini = LCGemini(model=custom_model)
-print(lcGemini.generate("Write me a joke"))
+Gemini = LCGemini(model=custom_model)
